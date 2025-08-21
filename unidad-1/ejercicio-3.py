@@ -1,0 +1,5 @@
+nombre = input("hola nombre?")
+apellido = input("apellido?")
+edad =int(input("edad?"))
+nacimiento=input("Lugar de nacimmiento?")
+print(f"Hola {nombre}, {apellido} tienes {edad} años y naciste en {nacimiento}")

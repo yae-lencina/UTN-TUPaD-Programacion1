@@ -5,6 +5,8 @@ productos=[]
 
 buscar=input("Ingrese nombre del producto: ")
 
+encontrado=False
+
 with open ("productos.txt","r") as archivo:
     for linea in archivo:
         linea=linea.strip()
@@ -20,7 +22,14 @@ with open ("productos.txt","r") as archivo:
         }
 
         productos.append(producto)
+    
+for i in productos:
+    if i["nombre: "].lower()==buscar.lower():
+        encontrado=True
+        print(i)
 
-if buscar in productos:
-    if productos[nombre] == buscar:
-        print(productos[buscar])
+if encontrado==False:
+    print("EROR.Producto no encontado.")
+
+
+
